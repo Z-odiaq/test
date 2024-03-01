@@ -83,12 +83,7 @@ public class DateFormatDetectorComparison {
                 return null;
             }
 
-            if (isValidDay(day) && isValidMonth(month) && isValidYear(year)) {
-                return new String[]{day, month, year};
-            } else {
-                // Validation failed, return null
-                return null;
-            }
+
         } else {
             // No match, return null
             return null;
@@ -117,8 +112,8 @@ public class DateFormatDetectorComparison {
 
         for (String input : dateExamples) {
             for (Map.Entry<String, String> entry : datePatternsMap.entrySet()) {
-                Pattern regex = Pattern.compile(entry.getKey());
-                Matcher matcher = regex.matcher(input);
+                Pattern regexx = Pattern.compile(entry.getKey());
+                Matcher matcher = regexx.matcher(input);
                 if (matcher.matches()) {
 
                     //test which one is the month and which one is the day

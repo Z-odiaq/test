@@ -10,6 +10,7 @@ module com.example.test {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.fasterxml.jackson.databind;
+    requires org.apache.poi.ooxml;
 
     opens com.example.test to javafx.fxml;
     exports com.example.test;
